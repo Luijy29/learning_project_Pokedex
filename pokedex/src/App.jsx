@@ -1,16 +1,17 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { TasksPage } from "./pages/TaskPage";
-import { TasksFromPage } from "./pages/TaskFromPage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Home } from "./pages/Home";
+import { Details } from "./pages/Details";
 
 function App() {
   return (
+
     <BrowserRouter>
       <Routes>
-      <Route path='/' element={<Navigate to="/tasks" />} />
-        <Route path='/tasks' element={<TasksPage />} />
-        <Route path='/tasks-create' element={<TasksFromPage />} />
+        <Route path='/' element={<Home />} />
+        <Route path="/Details" element={<Details />} />
       </Routes>
     </BrowserRouter>
+    
   );
 }
 
